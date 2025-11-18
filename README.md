@@ -1,6 +1,6 @@
 TypeScript-এ interface এবং type alias—দুটোই object-এর structure (shape) define করতে সাহায্য করে। কিন্তু এগুলোর মধ্যে কিছু গুরুত্বপূর্ণ পার্থক্য আছে।
 
-1. Interface শুধু “Object Structure” বর্ণনা করতে ব্যবহৃত হয়, কিন্তু Type অনেক কিছুর জন্য ব্যবহার হয়
+1. Interface শুধু “Object Structure” বর্ণনা করতে ব্যবহৃত হয়, কিন্তু Type অনেক কিছুর জন্য ব্যবহার হয়,
 Interface কী define করতে পারে?
 
 Object
