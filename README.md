@@ -52,6 +52,8 @@ name: string;
 type Employee = Person & {
 salary: number;
 };
+
+
 3. Interface আবার declare করা যায় (merge হয়), কিন্তু Type never merge হয়
  একাধিক interface একই নামে লিখলে তারা merge হয়ে যায়।
 
@@ -68,6 +70,7 @@ const u: User = {
 name: "Arif",
 age: 22
 };
+
 
 4. Interface মূলত “Contracts” তৈরি করতে ব্যবহৃত হয়, Class structure enforce করতে পারে
 Interface class implement করতে পারে:
@@ -96,9 +99,12 @@ success: boolean;
 };
 
 Interface এ conditional type করা যায় না।
+
+
 6. Interface object-oriented pattern-এ ভালো মানায়, Type functional pattern-এ ভালো
 Interface → class based architecture
 Type → modern TS functional coding style
+
 7. Performance (TypeScript compiler) দিক থেকে Interface একটু faster
 
 Interface গুলো compile-time এ TypeScript সহজে optimize করতে পারে।
@@ -147,17 +153,17 @@ unknown নিরাপদ (safe), কারণ TypeScript ভুল ব্য�
 never মানে: “এই জিনিসটি কখনও রিটার্ন করবে না, বা কখনও ঘটবেই না।”
 এই টাইপ সাধারণত ৩ জায়গায় দেখা যায়—
 
-(১) ফাংশন যেগুলো কখনো শেষ হয় না
+(a) ফাংশন যেগুলো কখনো শেষ হয় না
 function infiniteLoop(): never {
   while (true) {}
 }
 
-(২) ফাংশন যেগুলো সবসময় error ছোড়ে
+(b) ফাংশন যেগুলো সবসময় error ছোড়ে
 function throwError(): never {
   throw new Error("Something went wrong");
 }
 
-(৩) এমন শর্ত যা কখনো সত্য হতে পারে না
+(c) এমন শর্ত যা কখনো সত্য হতে পারে না
 type A = "x" | "y";
 
 function check(value: A) {
